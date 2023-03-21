@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./loadingbar.css"; // 로딩바 CSS 파일 import
+import React, { useState, useEffect } from 'react';
+import './LoadingBar.css';
 
 const LoadingBar = () => {
     const [progress, setProgress] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const loadingDuration = 3000; // 로딩 시간 설정 (현재 3000ms로 설정되어 있음)
+        const loadingDuration = 3000;
         const progressInterval = loadingDuration / 100;
 
         const timer = setInterval(() => {
@@ -26,20 +26,16 @@ const LoadingBar = () => {
     }, []);
 
     return (
-        <div className={`loading${isLoading ? "" : " loaded"}`}>
-            <div className="loading-container">
-                <div
-                    className={`counter${isLoading ? "" : " loaded"}`}
-                    style={{ transform: `translate(0, ${isLoading ? "0%" : "10%"})` }}
-                >
-                    {progress}%
+        isLoading && (
+            <div className="loading">
+                <div className="lineContainer">
+                    <div className="counter">{progress}%</div>
+                    <div className="progressBar">
+                        <div className="line" style={{ width: `${progress}%` }}></div>
+                    </div>
                 </div>
-                <div
-                    className={`line${isLoading ? "" : " loaded"}`}
-                    style={{ width: `${progress}%` }}
-                ></div>
             </div>
-        </div>
+        )
     );
 };
 

@@ -4,18 +4,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  zIndex: 9999;
+  z-index: 9999;
   display: flex;
-  justifyContent: center;
-  alignItems: center;
+  justify-content: center;
+  align-items: center;
   background: #01012a;
 }
 
 .counter {
   padding: 0.8rem;
-  fontFamily: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   color: #33def4;
-  textAlign: center;
+  text-align: center;
 }
 
 .lineContainer {
@@ -30,24 +30,7 @@
   left: 0;
   bottom: 0;
   height: 2px;
-  transition: width 0.8s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-}
-.progressBar {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  position: relative;
-  width: 100%;
-  height: 5px;
-}
-
-.lineContainer {
-  position: relative;
-  width: 60%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .progressBar {
@@ -56,5 +39,4 @@
   position: relative;
   width: 100%;
   height: 5px;
-  margin-top: 10px;
 }

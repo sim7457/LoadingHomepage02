@@ -1,0 +1,29 @@
+@import url(./font.css);
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+}
+
+img {
+    vertical-align: middle;
+}
